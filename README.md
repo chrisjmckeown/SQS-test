@@ -44,7 +44,7 @@ The app is listening on port 3000
 * localhost:3000/send
   * Send a message.
 * localhost:3000/receive
-  * Receive a message.
+  * Receive a message. Puts the message in flight.
 * localhost:3000/delete
   * Deletes a message.
 * localhost:3000/purge

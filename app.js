@@ -74,7 +74,7 @@ app.get('/send',  (req, res) => {
     });
 });
 
-// Receive a message.
+// Receive a message. Puts the message in flight.
 // NOTE: This is a great long polling example. You would want to perform
 // this action on some sort of job server so that you can process these
 // records. In this example I'm just showing you how to make the call.
@@ -92,6 +92,7 @@ app.get('/receive',  (req, res) => {
         }
         else {
             res.send(data);
+            receipt = data.Messages[0].ReceiptHandle;
         }
     });
 });
